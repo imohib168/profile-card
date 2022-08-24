@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+body {
+  background: var(--dark-cyan);
+  height: 100vh;
+}
+
+.top-pattern {
+  position: fixed;
+  top: -500px;
+  left: -200px;
+  z-index: -1;
+}
+
+.bottom-pattern {
+  position: fixed;
+  bottom: -600px;
+  right: -200px;
+  z-index: -1;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 10px 30px 0px var(--dark-grayish-blue);
+}
+
+.img-container {
+  position: relative;
+}
+
+.avatar {
+  background-color: white;
+  height: 105px;
+  width: 105px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+  margin: 3.5em 0 0.3em 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.username h3 {
+  font-weight: 700;
+  color: var(--dark-desaturated-blue);
+}
+
+.username span {
+  font-weight: 400;
+  margin-left: 0.4em;
+  color: var(--dark-gray);
+  font-size: 18px;
+}
+
+.city {
+  color: var(--dark-gray);
+}
+
+.line {
+  width: 100%;
+  height: 0.7px;
+  background: lightgray;
+  margin: 1.3em 0 0 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5em 0em;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.stat h2 {
+  font-weight: 700;
+  color: var(--dark-desaturated-blue);
+  margin-bottom: 0.2em;
+}
+
+.stat h4 {
+  color: var(--dark-gray);
+}
+
+@media screen and (max-width: 375px) {
+  .card {
+    width: 350px;
+    max-width: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+  }
+
+  .stats {
+    width: 95%;
+  }
+}
